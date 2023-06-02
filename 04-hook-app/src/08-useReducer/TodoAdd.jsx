@@ -2,12 +2,13 @@ import { useForm } from "../hook/useForm"
 
 export const TodoAdd = ({onNewTodo}) => {
 
-    const { description,onInputChange, onResetForm } = useForm({
+    const { description, onInputChange, onResetForm } = useForm({
         description: ''
         })
 
     const onFormSubmit = (e) => {
         e.preventDefault()
+
         if(description.length <= 1) return;
 
         const newTodo = {
